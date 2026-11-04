@@ -1,0 +1,6 @@
+{
+  "name": "GHOST MALLI",
+  "description": "Cyber Security Education Toolkit featuring safe, defensive cybersecurity utilities, learning labs, password analyzer, and network tools.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
