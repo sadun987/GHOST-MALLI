@@ -14,10 +14,12 @@ jobs:
           java-version: '17'
       - name: Build with Gradle
         run: |
-          cd ghost-malli-cyber-toolkit/Application
+          PROJECT_DIR=$(dirname $(find . -name "build.gradle" | head -n 1))
+          echo "Found project dir: $PROJECT_DIR"
+          cd "$PROJECT_DIR"
           ./gradlew assembleDebug
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
-          path: ghost-malli-cyber-toolkit/Application/app/build/outputs/apk/debug/app-debug.apk
+          path: '**/app/build/outputs/apk/debug/app-debug.apk'
